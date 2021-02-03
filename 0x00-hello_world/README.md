@@ -1,0 +1,1 @@
+This is the readme file of the project to create my first program in C. It is Hello world.
