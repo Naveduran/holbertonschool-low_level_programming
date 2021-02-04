@@ -4,7 +4,9 @@
 /**
  * main - imprime string
  * Description: descripcion larga
- */
+ * Aqui está la descripción largota
+ * return - devuelve un zero
+*/
 
 int main(void)
 {
