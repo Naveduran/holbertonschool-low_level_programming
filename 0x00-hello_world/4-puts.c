@@ -2,12 +2,13 @@
 #include <stdio.h>
 
 /**
- * main - This function displays a sentence.
+ * main - Makes the sum of two numbers
  *
- * Description: This function display Programming is a multilingual puzzle.
- * it requiered a slash to show the inicial quote.
- * @: this is a header tag
- * return - This function returns zero.
+ * Description: This is a longer description.
+ * Don't forget that a line should not exceed 80 characters.
+ * But you're totally free to use several lines to properly
+ * describe your function
+ * Return: The sum of the two parameters
  */
 
 int main(void)
