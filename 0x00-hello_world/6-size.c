@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Makes the sum of two numbers
+ * main - Print the size of different variables in c
  *
  * Description: This is a longer description.
  * Don't forget that a line should not exceed 80 characters.
