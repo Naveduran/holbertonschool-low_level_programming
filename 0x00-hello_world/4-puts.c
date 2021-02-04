@@ -1,14 +1,17 @@
-/**This is the first comment */
+
 #include <stdio.h>
 
-/**This is the second comment */
+/**
+ * main - This function displays a sentence.
+ *
+ * Description: This function display Programming is a multilingual puzzle.
+ * it requiered a slash to show the inicial quote.
+ * @: this is a header tag
+ * return - This function returns zero.
+ */
 
 int main(void)
 {
-
-/*this is the third comment*/
 puts("\"Programming is like building a multilingual puzzle");
-
-/*this is the fourth comment*/
 return (0);
 }
