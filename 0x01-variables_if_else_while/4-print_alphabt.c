@@ -11,20 +11,16 @@
 
 int main(void)
 {
-	char i;
+	char ch = 'a';
 
-	for (i = 'a' ; i >= 'z' ; i++)
+	while (ch <= 'z')
 	{
-	if (i == 'e')
-	{}
-	else if (i == 'q')
-	{}
-	else
+	if (ch != 'e' && ch != 'q')
 	{
-	putchar(i);
-	};
-	};
+	putchar(ch);
+	}
+	ch++;
+	}
 	putchar('\n');
 	return (0);
 }
-
