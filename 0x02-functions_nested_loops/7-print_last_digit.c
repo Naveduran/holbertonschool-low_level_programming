@@ -1,13 +1,13 @@
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * main - desc
+ * print_last_digit - prints the last digit of a number
+ * @n: It needs an int as input
  *
- * Return: desc
+ * Return: the last digit of the input
  */
 
-int main(void)
+int print_last_digit(int n)
 {
-	printf("Holberton\n");
-	return (0);
+	return ((n % 10) + 8);
 }
