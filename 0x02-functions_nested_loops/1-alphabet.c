@@ -1,11 +1,15 @@
+#include "holberton.h"
+
 /**
- * main - desc
- *
- * Return: desc
+ * print_alphabet - prints the alphabet in lowe *
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	();
-	return (0);
+	int x;
+
+	for (x = 'a'; x <= 'z'; x++)
+		_putchar(x);
+
+	_putchar(10);
 }
