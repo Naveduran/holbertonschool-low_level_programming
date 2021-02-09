@@ -1,13 +1,16 @@
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * main - desc
+ * add - add two numbers
  *
- * Return: desc
+ * Return: the result
  */
 
-int main(void)
+int add(int a, int b)
 {
-	printf("Holberton\n");
+	int c;
+
+	a + b = c;
+	_putchar(c);
 	return (0);
 }
