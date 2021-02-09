@@ -1,13 +1,20 @@
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * main - desc
+ * _abs - computes the absolute value of an integer
+ * @n: It needs an int for input
  *
- * Return: desc
+ * Return: an int
  */
 
-int main(void)
+int _abs(int n)
 {
-	printf("Holberton\n");
-	return (0);
+	if (n < 0)
+	{
+		n = n * -1;
+	}
+	else
+	{
+	}
+	return (n);
 }
