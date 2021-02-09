@@ -1,13 +1,15 @@
-#include <stdio.h>
-
+#include "holberton.h"
 /**
- * main - desc
+ * _isalpha - checks lowercase
+ * @c: char to analyze
  *
- * Return: desc
+ * Return: one if lowercase and zero otherwise
  */
 
-int main(void)
+int _isalpha(int c)
 {
-	printf("Holberton\n");
-	return (0);
+	if ((c >= 97 && c <= 122) || (c >= 65 && c<= 90))
+		return (1);
+	else
+		return (0);
 }
