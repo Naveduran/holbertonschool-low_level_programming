@@ -2,6 +2,8 @@
 
 /**
  * add - add two numbers
+ *@a: an integer
+ *@b: an integer
  *
  * Return: the result
  */
@@ -10,7 +12,6 @@ int add(int a, int b)
 {
 	int c;
 
-	a + b = c;
-	_putchar(c);
-	return (0);
+	c = a + b;
+	return (c);
 }
