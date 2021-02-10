@@ -22,14 +22,18 @@ void times_table(void)
 			{
 				u = result % 10;
 				d = result / 10;
-				_putchar(32);
+				_putchar(' ');
 				_putchar(d + '0');
 				_putchar(u + '0');
 			}
+			else if (columna == 0)
+			{
+				_putchar(result + '0');
+			}
 			else
 			{
-				_putchar(32);
-				_putchar(32);
+				_putchar(' ');
+				_putchar(' ');
 				_putchar(result + '0');
 			}
 			if (columna == 9)
@@ -38,7 +42,7 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar(44);
+				_putchar(',');
 			}
 		}
 	}
