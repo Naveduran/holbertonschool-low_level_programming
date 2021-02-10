@@ -1,8 +1,10 @@
 #include "holberton.h"
+
 /**
  * times_table - prints the 9 times table
  *
  */
+
 void times_table(void)
 {
 	int fila = 0;
@@ -34,7 +36,6 @@ void times_table(void)
 			{
 				_putchar(10);
 			}
-
 			else
 			{
 				_putchar(44);
