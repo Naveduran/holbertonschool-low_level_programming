@@ -2,8 +2,6 @@
 
 /**
  * main - causes an infinite loop
- * the objetive of the comment is to avoid the loop
- *
  * Return: 0
  */
 
