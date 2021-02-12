@@ -1,26 +1,20 @@
 #include "holberton.h"
 
 /**
- * more_numbers - prints 10 times the numbers, from 0 to 14,
- * followed by a new line.
+ * print_square - prints a square, full of numerals followed by a new line
+ * @size: an integer that describes the size of the square
  *
  */
 
-void more_numbers(void)
+void print_square(int size)
 {
-	int unidad, decena, number, counter;
+	int fila, columna;
 
-	for (counter = 0; counter <= 9; counter++)
+	for (fila = 0; fila < size; fila++)
 	{
-		for (number = 0; number <= 14; number++)
+		for (columna = 0; columna < size; columna++)
 		{
-			unidad = number % 10;
-			decena = number / 10;
-			if (number > 9)
-			{
-				_putchar(decena + 48);
-			}
-			_putchar(unidad + 48);
+			_putchar(35);
 		}
 		_putchar(10);
 	}
