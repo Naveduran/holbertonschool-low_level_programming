@@ -5,20 +5,20 @@
  * @n: an integer
  */
 
-void print_diagonal(int n)
+void print_diagonal(int size)
 {
-	int spaces = n;
+	int columna, fila;
 
-	while (n > 0)
-	{
-		while (spaces > 0)
+	if (size <= 0)
+		_putchar(10);
+	else
+		for (fila = 0; fila < size; fila++)
 		{
-			_putchar(32);
-			spaces--;
+			for (columna = 0; columna < fila; columna++)
+			{
+				_putchar(32);
+			}
+			_putchar(92);
+			_putchar(10);
 		}
-		_putchar(92);
-		_putchar(32);
-		n--;
-	}
-	_putchar(32);
 }
