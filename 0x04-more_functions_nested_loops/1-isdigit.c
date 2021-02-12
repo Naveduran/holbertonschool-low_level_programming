@@ -1,15 +1,18 @@
 #include "holberton.h"
 
 /**
- *  -  *
+ * _isdigit -  *
+ * @c is an integer
  *
- *
+ * Return: 1 if the int is a number from 0 to 9.
+ * other wise it returns zero.
  */
 
-prototiposincoma
+int _isdigit(int c);
 {
 
-
-
-	return (0);
+	if(c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
 }
