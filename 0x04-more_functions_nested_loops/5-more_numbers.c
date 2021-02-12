@@ -10,7 +10,7 @@ void more_numbers(void)
 {
 	int unidad, decena, number, counter;
 
-	for (counter = 0; counter <= 10; counter++)
+	for (counter = 0; counter <= 9; counter++)
 	{
 		for (number = 0; number <= 14; number++)
 		{
