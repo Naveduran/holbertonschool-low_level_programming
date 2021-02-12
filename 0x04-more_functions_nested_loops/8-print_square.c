@@ -1,22 +1,20 @@
 #include "holberton.h"
 
 /**
- * print_square - prints a square, full of numerals followed by a new line
- * @size: an integer that describes the size of the square
- *
+ * print_square - prints a square, followed by a new line.
+ * @size: an integer
  */
 
 void print_square(int size)
 {
-	int fila, columna;
+	int columna, fila;
 
-	for (fila = 0; fila < size; fila++)
-	{
-		for (columna = 0; columna < size; columna++)
+		for (fila = 0; fila < size; fila++)
 		{
-			_putchar(35);
+			for (columna = 0; columna < size; columna++)
+			{
+				_putchar(35);
+			}
+			_putchar(10);
 		}
-		_putchar(10);
-	}
-	_putchar(10);
 }
