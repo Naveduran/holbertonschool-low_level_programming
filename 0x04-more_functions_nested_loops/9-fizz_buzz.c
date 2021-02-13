@@ -31,9 +31,11 @@ int main(void)
 		{
 			printf("%d", number);
 		}
-		printf(" ");
+		if (number != 100)
+		{
+			printf(" ");
+		}
 	}
-
 	printf("\n");
 	return (0);
 }
