@@ -1,14 +1,10 @@
 #include "holberton.h"
-
 /**
  * print_number - prints an integer
  * @n: any integer.
- *
  */
-
 void print_number(int n)
 {
-/*para saber si es negativo, volverlo positivo e imprimir el menos */
 	if (n == -2147483647)
 	{
 		_putchar('-');
