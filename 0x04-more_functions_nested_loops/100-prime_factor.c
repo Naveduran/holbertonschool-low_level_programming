@@ -13,7 +13,7 @@ int main(void)
 	int counter;
 	unsigned long imprimir;
 
-	for (counter = 2; number > 1; counter ++)
+	for (counter = 2; number > 1; counter++)
 	{
 		if ((number % counter) == 0)
 		{
