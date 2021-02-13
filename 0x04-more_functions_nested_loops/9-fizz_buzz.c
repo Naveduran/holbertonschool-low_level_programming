@@ -8,7 +8,7 @@
  *
  */
 
-int main(void)
+void main(void)
 {
 	int number;
 
@@ -34,5 +34,4 @@ int main(void)
 	}
 
 	printf("\n");
-	return (0);
 }
