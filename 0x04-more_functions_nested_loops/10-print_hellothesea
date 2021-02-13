@@ -1,0 +1,34 @@
+#include "holberton.h"
+
+/**
+ * print_triangle - prints a triangle of #, followed by a new line.
+ * @size: an integer that defines the size
+ */
+
+void print_triangle(int size)
+{
+	int columna, fila, counteresp, counternum;
+
+	if (size <= 0)
+		_putchar(10);
+	else
+		for (fila = 0; fila < size; fila++)
+		{
+			for (columna = 0; columna < size - 1; columna++)
+			{
+				counteresp = columna - fila;
+				while (counteresp > 0)
+				{
+					_putchar(32);
+					counteresp--;
+				}
+			}
+			counternum = fila;
+			while (counternum > 0)
+			{
+				_putchar(35);
+				counternum--;
+			}
+			_putchar(10);
+		}
+}
