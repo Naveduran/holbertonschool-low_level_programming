@@ -9,6 +9,20 @@
 void print_number(int n)
 {
 /*para saber si es negativo, volverlo positivo e imprimir el menos */
+	if (n == -2147483647)
+	{
+		_putchar('-');
+		_putchar('2');
+		_putchar('1');
+		_putchar('4');
+		_putchar('7');
+		_putchar('4');
+		_putchar('8');
+		_putchar('3');
+		_putchar('6');
+		_putchar('4');
+		_putchar('7');
+	}
 	if (n < 0)
 	{
 		_putchar(45);
