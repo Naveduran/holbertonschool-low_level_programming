@@ -13,7 +13,9 @@ void print_array(int *a, int n)
 	int counter;
 	int b;
 
-	for (b = 0 ; a[b] != '\0'; b++);
+	for (b = 0 ; a[b] != '\0'; b++)
+	{
+	}
 
 	if (n > b)
 		n = b - 1;
