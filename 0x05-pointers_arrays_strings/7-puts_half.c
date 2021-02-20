@@ -8,15 +8,24 @@
 
 void puts_half(char *str)
 {
-	int lenght;
-	int medium;
+	int lenght, medium, n;
 
 	if (*str != '\0')
 	{
 		for (lenght = 0; str[lenght] != '\0'; lenght++)
 		{
 		}
-		if (lenght % 2 == 0)
+
+		if (lenght % 2 != 0)
+		{
+			n = (lenght - 1) / 2;
+			for (; str[n]; n++)
+			{
+				_putchar(str[n]);
+			}
+		}
+
+		else
 		{
 			medium = lenght / 2;
 			for (; medium < lenght; medium++)
@@ -25,5 +34,6 @@ void puts_half(char *str)
 			}
 		}
 		_putchar(11);
+
 	}
 }
