@@ -16,16 +16,16 @@ void puts2(char *str)
 	{
 		max++;
 	}
-	if (max = 0)
-	{
-		break;
-	}
 	max--;
-	while (counter < max)
+	if (max <= 0)
+		break;
+	else
 	{
-		_putchar(*str);
-		counter = counter + 2;
+		while (counter < max)
+		{
+			_putchar(*str);
+			counter = counter + 2;
+		}
+		_putchar(10);
 	}
-	_putchar(10);
-
 }
