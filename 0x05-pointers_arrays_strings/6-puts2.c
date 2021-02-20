@@ -9,12 +9,22 @@
 
 void puts2(char *str)
 {
+	int max;
 	int counter = 0;
 
-	while (counter < 10)
+	for (max = 0; str[counter] != '\0'; str++)
 	{
-		_putchar(str[counter]);
-		counter = counter +2;
+		max++;
+	}
+	if (max = 0)
+	{
+		break;
+	}
+	max--;
+	while (counter < max)
+	{
+		_putchar(*str);
+		counter = counter + 2;
 	}
 	_putchar(10);
 
