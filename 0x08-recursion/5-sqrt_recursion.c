@@ -9,7 +9,8 @@
 
 int nuevafuncion(int n, int y)
 {
-	if (y > (n / 2))
+
+	if (y > n)
 	{
 		return (-1);
 	}
