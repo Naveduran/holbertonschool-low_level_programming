@@ -7,7 +7,6 @@
  *
  * Return: 1 if it has only numbers, and 0 other wise
  */
-
 int _isdigit(char *string)
 {
 	if (*string == '\0')
@@ -16,14 +15,12 @@ int _isdigit(char *string)
 	}
 	return ((*string >= '0' && *string <= '9') && (_isdigit(string + 1)));
 }
-
 /**
  * main - entry point
  * @argv: values
  * @argc: counter
  * Return: an int
  */
-
 int main(int argc, char *argv[])
 {
 	int counter, suma;
