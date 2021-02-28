@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * _isdigit - it lets to find if a string has only numbers
  * @string: needs a string to prove if it contains only digits
