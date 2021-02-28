@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	if (argc < 3)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 
 	suma = 0;
