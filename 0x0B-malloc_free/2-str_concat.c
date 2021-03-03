@@ -18,7 +18,9 @@ char *str_concat(char *s1, char *s2)
 		for (l1 = 0; *(s1 + l1); l1++);
 	if (s2 != NULL)
 		for (l2 = 0; *(s2 + l2); l2++);
+
 	dino = malloc((sizeof(char) * (l1 + l2)) + 1);
+
 	if (dino == NULL)
 		return (NULL);
 
