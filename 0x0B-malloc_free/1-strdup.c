@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+
 /**
  * _strdup - returns a pointer to a newly allocated space in memory,
  * which contains a copy of the string given as a parameter.
@@ -16,7 +17,7 @@ char *_strdup(char *str)
 		return (NULL);
 	while (*(str + x))
 		x++;
-	dino = malloc(b * sizeof(char) + 1);
+	dino = malloc(x * sizeof(char) + 1);
 	if (dino == NULL)
 		return (NULL);
 	for (counter = 0; counter <= x; counter++)
