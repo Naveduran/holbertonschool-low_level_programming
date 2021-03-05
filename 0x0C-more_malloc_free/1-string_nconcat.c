@@ -1,5 +1,7 @@
 #include "holberton.h"
 
+
+
 /**
  * *string_nconcat - ..
  * @s1:..
@@ -26,7 +28,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	for (counter = 0; counter <= maxtotal; counter++)
 	{
-
 		if (counter < max1)
 			pointer[counter] = s1[counter];
 		if (counter >= max1)
