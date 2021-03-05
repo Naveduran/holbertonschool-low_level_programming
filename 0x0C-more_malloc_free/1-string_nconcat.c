@@ -20,7 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		max2 = strlen(s2);
 	if (n < strlen(s2))
 		max2 = n;
-	maxtotal = max1 + max2 + 1;
+	maxtotal = max1 + max2;
 	pointer = malloc(maxtotal);
 	if (pointer == NULL)
 		return (NULL);
