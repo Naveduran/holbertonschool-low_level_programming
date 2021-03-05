@@ -13,17 +13,15 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int counter;
 
 	if (nmemb == 0 || size == 0)
-		return ('\0');
-	else
-	{
-		pointer = malloc(size * nmemb);
+		return (NULL);
 
-		if (pointer == NULL)
-			return (NULL);
-		for (counter = 0; counter <= size; counter++)
-		{
-			pointer[counter] = '0';
-		}
-		return (pointer);
+	pointer = malloc(size * nmemb);
+
+	if (pointer == NULL)
+		return (NULL);
+	for (counter = 0; counter <= size; counter++)
+	{
+		pointer[counter] = 0;
 	}
+	return (pointer);
 }
