@@ -1,7 +1,19 @@
 #include "holberton.h"
-
-
-
+/**
+ * _strlen - ..
+ * @s: ..
+ *
+ * Return: ..
+ */
+int _strlen(char *s)
+{
+	if (*s != '\0')
+	{
+		return (1 + _strlen(s + 1));
+	}
+	else
+		return (0);
+}
 /**
  * *string_nconcat - ..
  * @s1:..
@@ -9,7 +21,6 @@
  * @n: ..
  * Return: ..
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *pointer;
@@ -17,10 +28,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (*s1 == '\0')
 		return (0);
-	max1 = strlen(s1);
-	if (n >= strlen(s2))
-		max2 = strlen(s2);
-	if (n < strlen(s2))
+	max1 = _strlen(s1);
+	if (n >= _strlen(s2))
+		max2 = _strlen(s2);
+	if (n < _strlen(s2))
 		max2 = n;
 	maxtotal = max1 + max2;
 	pointer = malloc(maxtotal);
