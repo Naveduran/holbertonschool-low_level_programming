@@ -10,19 +10,26 @@ int *array_range(int min, int max)
 	int *array;
 	int counter = 0;
 	int size;
+	int *pointer = &min;
 
 	if (min > max)
 	{
-/*		printf("min es mayor que max"); */
+/* min es mayor que max */
 		return (NULL);
 	}
 
+	if (min == max)
+	{
+/*min es igual a max */
+		return (pointer);
+	}
+
 	size = max - min;
-	array = malloc(size * 4);
+	array = malloc(size * sizeof(int));
 
 	if (array == NULL)
 	{
-/*		printf("no se pudo crear el array en la memoria"); */
+/*"no se pudo crear el array en la memoria*/
 		return (NULL);
 	}
 
