@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * *array_range - ..
  * @min: ..
@@ -10,7 +11,6 @@ int *array_range(int min, int max)
 	int *array;
 	int counter = 0;
 	int size;
-	int *pointer = &min;
 
 	if (min > max)
 	{
@@ -18,13 +18,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	if (min == max)
-	{
-/*min es igual a max */
-		return (pointer);
-	}
-
-	size = max - min;
+	size = max - min + 1;
 	array = malloc(size * sizeof(int));
 
 	if (array == NULL)
@@ -35,6 +29,7 @@ int *array_range(int min, int max)
 
 	for (counter = 0; counter <= (max - min); counter++)
 	{
+/*para cada elemento del array asignele el numero mínimo más el contador */
 		array[counter] = min + counter;
 	}
 	return (array);
