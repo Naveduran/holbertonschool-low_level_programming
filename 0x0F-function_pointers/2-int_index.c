@@ -19,11 +19,12 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 		for(counter = 0; counter < size; counter++)
 		{
-			yeah = (*cmp)(array[counter]);
+      			yeah = (*cmp)(array[counter]);
 			if (yeah)
 				return (counter);
 		}
-		return (-1);
+		if (!yeah)
+			return(-1)
 	}
 	return (0);
 
