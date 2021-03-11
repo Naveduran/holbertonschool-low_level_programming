@@ -9,13 +9,15 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list argumentos;
-	int counter;
-	unsigned int result;
+	unsigned int counter;
+	unsigned int result = 0;
 
 	va_start(argumentos, n);
 
-	for (counter = 0; counter <= n; counter++)
-		result = result + va_arg(args, n);
-	va_end(args);
+	for (counter = 0; counter < n; counter++)
+	{
+		result = result + va_arg(argumentos, unsigned int);
+	}
+	va_end(argumentos);
 	return (result);
 }
