@@ -12,9 +12,8 @@ int sum_them_all(const unsigned int n, ...)
 	int counter;
 	unsigned int result;
 
-	va start(argumentos, n);
-	if (n == 0)
-		return (0);
+	va_start(argumentos, n);
+
 	for (counter = 0; counter <= n; counter++)
 		result = result + va_arg(args, n);
 	va_end(args);
