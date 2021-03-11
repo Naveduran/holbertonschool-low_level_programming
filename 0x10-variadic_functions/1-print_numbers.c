@@ -7,21 +7,18 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list argumentos;
-        unsigned int counter;
+	unsigned int counter;
 
-        va_start(argumentos, n);
+	va_start(argumentos, n);
 
-        for (counter = 0; counter < n; counter++)
-        {
+	for (counter = 0; counter < n; counter++)
+	{
 		printf("%d", va_arg(argumentos, int));
 		if ((separator != NULL) && (counter != n - 1))
 		{
-
 			printf("%s", separator);
 		}
-
 	}
 	printf("\n");
-        va_end(argumentos);
-
+	va_end(argumentos);
 }
