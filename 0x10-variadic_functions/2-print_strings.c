@@ -8,12 +8,19 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list argumentos;
 	unsigned int counter;
+	char *cheese;
 
 	va_start(argumentos, n);
 
 	for (counter = 0; counter < n; counter++)
 	{
-		printf("%s", va_arg(argumentos, char*));
+		cheese = va_arg(argumentos, char*);
+		if (cheese == NULL)
+			printf("(nil)");
+		else
+		{
+			printf("%s", cheese);
+		}
 		if ((separator != NULL) && (counter != n - 1))
 		{
 			printf("%s", separator);
