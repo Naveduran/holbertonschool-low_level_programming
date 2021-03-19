@@ -6,7 +6,7 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t length = 0;
+	unsigned int length = 0;
 
 	if (!h)
 	{
