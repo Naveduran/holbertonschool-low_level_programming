@@ -12,7 +12,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *new_node, *temporary_head, *temporary_next;
 	unsigned int counter;
 
-	if (!head || !idx || !n)
+	if (!head)
 		return (NULL);
 	if (idx == 0)
 	{
