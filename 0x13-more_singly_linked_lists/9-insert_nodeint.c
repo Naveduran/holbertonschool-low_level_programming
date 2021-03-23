@@ -24,7 +24,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	temporary_head = *head;
 /*walk through the list until you reach the index minus one */
 	for (counter = 0; counter < (idx - 1); counter++)
+	{
 		*head = (*head)->next;
+		if (*head == NULL)
+			return (NULL);
+	}
 /*save temporarily the direction saved in the next position to assign later*/
 	temporary_next = (*head)->next;
 /*assign the direction of the new node to the next of the previus node*/
