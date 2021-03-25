@@ -11,14 +11,16 @@
 .LC4:
 	.string	","
 .LC5:
-	.string	"b"
+	.string	" "
 .LC6:
-	.string	"r"
+	.string	"b"
 .LC7:
-	.string	"t"
+	.string	"r"
 .LC8:
-	.string	"n"
+	.string	"t"
 .LC9:
+	.string	"n"
+.LC10:
 	.string	"\n"
 	.text
 	.globl	main
@@ -62,6 +64,11 @@ main:
 	movl	$0, %eax
 	call	write
 	movl	$1, %edx
+	movl	$.LC5, %esi
+	movl	$1, %edi
+	movl	$0, %eax
+	call	write
+	movl	$1, %edx
 	movl	$.LC0, %esi
 	movl	$1, %edi
 	movl	$0, %eax
@@ -77,7 +84,7 @@ main:
 	movl	$0, %eax
 	call	write
 	movl	$1, %edx
-	movl	$.LC5, %esi
+	movl	$.LC6, %esi
 	movl	$1, %edi
 	movl	$0, %eax
 	call	write
@@ -87,17 +94,7 @@ main:
 	movl	$0, %eax
 	call	write
 	movl	$1, %edx
-	movl	$.LC6, %esi
-	movl	$1, %edi
-	movl	$0, %eax
-	call	write
-	movl	$1, %edx
 	movl	$.LC7, %esi
-	movl	$1, %edi
-	movl	$0, %eax
-	call	write
-	movl	$1, %edx
-	movl	$.LC3, %esi
 	movl	$1, %edi
 	movl	$0, %eax
 	call	write
@@ -107,7 +104,17 @@ main:
 	movl	$0, %eax
 	call	write
 	movl	$1, %edx
+	movl	$.LC3, %esi
+	movl	$1, %edi
+	movl	$0, %eax
+	call	write
+	movl	$1, %edx
 	movl	$.LC9, %esi
+	movl	$1, %edi
+	movl	$0, %eax
+	call	write
+	movl	$1, %edx
+	movl	$.LC10, %esi
 	movl	$1, %edi
 	movl	$0, %eax
 	call	write
