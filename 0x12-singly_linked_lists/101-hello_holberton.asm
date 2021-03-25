@@ -18,6 +18,7 @@ main:
 	movl	$1, %edi
 	movl	$0, %eax
 	call	write
+	movl	$0, %eax
 	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
