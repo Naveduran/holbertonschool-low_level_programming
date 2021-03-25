@@ -1,22 +1,12 @@
-.MODEL SMALL
-.STACK 100H
-.DATA
-
-;; The string to be printed
-	STRING DB 'Hello, Holberton', '$'
-
-.CODE
-	MOV AX,@DATA
-	MOV DS,AX
-
-	;;  load address of the string
-	LEA DX,STRING
-
-	;; output the string
-	;; loaded in dx
-	MOV AH,09H
-	INT 21H
-
-	;; interrupt to exit
-	MOV AH,4CH
-	INT 21H
+section .text
+	    global _start
+section .data
+	msg db  'Hello, Holberton',0xa
+	len equ $ - msg
+section .text
+_start:
+	mov edx,len
+	mov ecx,msg
+	mov ebx,1  	;file descriptor (stdout)
+	mov eax,4	;system call number (sys_write)
+	int 0x80    	;call kernel
