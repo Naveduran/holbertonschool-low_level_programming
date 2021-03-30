@@ -1,6 +1,7 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
-#include <stdio.h> /*for */
+
+#include <stdio.h> /*for malloc, free, and exit*/
 
 #include <unistd.h> /* for STDIN_FILENO, STDOUT_FILENO, STDERR_FILENO,*/
 /*ssize_t, execve, write, read, isatty*/
@@ -13,6 +14,8 @@
 
 #include <fcntl.h> /*for O_CREAT, O_APPEND, O_RDONLY, O_RDWR, O_WRONLY,*/
 /* O_TRUNC*/
+
+int _putchar(char c);
 
 ssize_t read_textfile(const char *filename, size_t letters);
 
