@@ -11,11 +11,8 @@
 
 int main(void)
 {
-char buf[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-size_t nbytes;
-
-nbytes = strlen(buf);
-write(2, buf, nbytes);
+char buf[62] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+write(2, buf, 62);
 
 exit(1);
 return (1);
