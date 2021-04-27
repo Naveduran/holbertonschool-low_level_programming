@@ -1,19 +1,30 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
 
 /**
- * main - prints the alphabeth in lower
- * and upper case.
- *
+ * main - prints all possible different combinations of two digits.
  * Return: always zero.
  */
 
 int main(void)
 {
-	int n;
+	int i, j;
 
-	printf("nothing");
-
+	for (i = 0; i < 10; i++)
+	{
+		for (j = 0; j < 10; j++)
+		{
+			if (i != j && i < j)
+			{
+				putchar (i + 48);
+				putchar (j + 48);
+				if (!((i == 8) && (j == 9)))
+				{
+					putchar (',');
+					putchar (' ');
+				}
+			}
+		}
+	}
+	putchar ('\n');
 	return (0);
 }
