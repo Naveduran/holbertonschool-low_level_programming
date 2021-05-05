@@ -15,10 +15,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	temp = *head; /*usamos un temporal para recorrer*/
 	for (i = 0; i < index; i++) /*buscar la posición*/
 	{
-		if (!temp)
-			return (-1); /*llegué al final sin encontrar el index*/
 		if (temp->next)
 			temp = temp->next; /* me muevo al siguiente*/
+		else /*llegué al final sin encontrar el index*/
+		{
+			return (-1);
+		}
 	} /* si salgo del for es que encontré el index */
 	if (temp->prev == NULL) /*estoy al inicio de la lista*/
 	{
