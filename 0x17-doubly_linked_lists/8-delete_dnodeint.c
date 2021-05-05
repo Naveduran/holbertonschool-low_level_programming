@@ -1,39 +1,48 @@
 #include "lists.h"
 /**
- * delete_dnodeint_at_index - deletes the node at index index of a linked list
+ * delete_dnodeint_at_index - deletes the node at index of a linked list
  * @head: head of the list
  * @index: index of the list that should be added
  * Return: 1 if it succeeded, -1 if it failed
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *temp;
 	unsigned int i;
+	dlistint_t *temp;
 
-	if (!head || !(*head)->next)
+	if (!(*head) || !head) /*si nos mandaron un puntero a null*/
 		return (-1);
-	temp = *head;
-	for (i = 0; temp->next != NULL && i < index; i++)
+	temp = *head; /*usamos un temporal para recorrer*/
+	for (i = 0; i < index; i++) /*buscar la posición*/
 	{
-		temp = temp->next;
-	}
-	if (index == 0)
+		if (!temp)
+			return (-1); /*llegué al final sin encontrar el index*/
+		if (temp->next)
+			temp = temp->next; /* me muevo al siguiente*/
+	} /* si salgo del for es que encontré el index */
+	if (temp->prev == NULL) /*estoy al inicio de la lista*/
 	{
-		if ((*head)->next)
-		{
-			*head = (*head)->next;
-		}
-		else
+		if (temp->next == NULL) /*si la lista tiene solo un nodo*/
 		{
 			free(temp);
+			*head = NULL;
 			return (1);
 		}
+		if (temp->next != NULL) /*si la lista tiene mas de un nodo*/
+		{
+			temp->next->prev = NULL; /*corro la cabeza*/
+			*head = temp->next;
+		}
 	}
-	else
+	else if (temp->next == NULL) /* estoy al final de la lista*/
+	{
+		temp->prev->next = NULL;
+	}
+	else /*estoy en la mitad de la lista*/
 	{
 		temp->prev->next = temp->next;
 		temp->next->prev = temp->prev;
 	}
-	free(temp);
+	free(temp); /*liberar el nodo*/
 	return (1);
 }
