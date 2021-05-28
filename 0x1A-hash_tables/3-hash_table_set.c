@@ -14,14 +14,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht)
 		return (0);
-	if (!ht->array[index])
-		ht->array[index]->value = (char *) value;
-	else
-	{
-		new_node = (hash_node_t *) calloc(sizeof(hash_node_t), 1);
-		new_node->value = (char *) value;
+
+	new_node = (hash_node_t *) calloc(sizeof(hash_node_t), 1);
+	new_node->value = (char *) value;
+
+	if (ht->array[index])
+	{/*si ya existia algo ahi ponga el new_node al inicio*/
 		new_node->next = ht->array[index];
-		ht->array[index] = new_node;
-	}
+	} /*si no existia pongalo en el index*/
+	ht->array[index] = new_node;
 	return (1);
 }
