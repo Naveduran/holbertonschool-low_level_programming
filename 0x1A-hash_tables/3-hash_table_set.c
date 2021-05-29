@@ -24,7 +24,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	while (list_node != NULL)
 	{
 		if (list_node->key == key)
+		{
 			list_node->value = (char *) value;
+			return (1);
+		}
 		list_node = list_node->next;
 	}
 
