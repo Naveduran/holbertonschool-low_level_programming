@@ -16,7 +16,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!key || key == NULL)
 		return (0);
 	/*if the table doesn't exist or is empty*/
-	if (!ht || ht->size == 0)
+	if (ht == NULL || ht->size == 0)
 		return (0);
 
 	/*if the key already exist in any node of the list, update the value*/
