@@ -8,12 +8,14 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	int index = key_index((unsigned const char *) key, ht->size);
-	hash_node_t *elem_in_list;
+	int index = 0;
+	hash_node_t *list_node;
 
 /*if hash table doesn't exist or it's size is 0*/
 	if (!ht || ht->size == 0)
 		return (NULL);
+
+	index = key_index((unsigned const char *) key, ht->size);
 
 /* if index doesn't exist */
 	if (!ht->array[index])
@@ -22,8 +24,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	list_node = ht->array[index];
 	while (list_node != NULL)
 	{
-		if (list_node->key == key)
-			list_node->value = (char *) value;
+		if (strcmp(list_node->key, key) == 0)/*they match*/
+			return (list_node->value);
 		list_node = list_node->next;
 	}
 
