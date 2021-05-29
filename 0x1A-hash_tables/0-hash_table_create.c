@@ -35,7 +35,7 @@ hash_node_t *create_new_node(const char *key, const char *value)
 /*create a new node */
 	new_node = (hash_node_t *) malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
-		return (0);
+		return (NULL);
 
 /*assign value and key*/
 	new_node->value = strdup((char *) value);
