@@ -23,7 +23,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	list_node = ht->array[index];
 	while (list_node != NULL)
 	{
-		if (list_node->key == key)
+		if (strcmp(list_node->key, key) == 0)/*they match*/
 		{
 			list_node->value = (char *) value;
 			return (1);
