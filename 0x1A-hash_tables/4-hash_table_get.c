@@ -11,18 +11,21 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	int index = key_index((unsigned const char *) key, ht->size);
 	hash_node_t *elem_in_list;
 
-	if (ht->array[index])
-	{
-		if (ht->array[index]->key == key)
-			return (ht->array[index]->value);
+/*if hash table doesn't exist or it's size is 0*/
+	if (!ht || ht->size == 0)
+		return (NULL);
 
-		elem_in_list = ht->array[index]->next;
-		while (elem_in_list->next)
-		{
-			if (elem_in_list->key == key)
-				return (elem_in_list->value);
-			elem_in_list = elem_in_list->next;
-			}
+/* if index doesn't exist */
+	if (!ht->array[index])
+		return (NULL);
+
+	list_node = ht->array[index];
+	while (list_node != NULL)
+	{
+		if (list_node->key == key)
+			list_node->value = (char *) value;
+		list_node = list_node->next;
 	}
+
 	return (NULL);
 }
