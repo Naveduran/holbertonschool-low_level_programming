@@ -9,7 +9,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int index = key_index((unsigned const char *) key, ht->size);
+	int index = 0;
 	hash_node_t *new_node = NULL, *list_node = NULL;
 
 	/*check key*/
@@ -18,7 +18,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/*if the table doesn't exist or is empty*/
 	if (ht == NULL || ht->size == 0)
 		return (0);
-
+	index = key_index((unsigned const char *) key, ht->size);
 	/*if the key already exist in any node of the list, update the value*/
 	list_node = ht->array[index];
 	while (list_node != NULL)
