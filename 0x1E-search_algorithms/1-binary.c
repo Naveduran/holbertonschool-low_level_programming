@@ -12,16 +12,15 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	unsigned int index = 0, middle;
+	unsigned int index = 0, middle, nm;
+	int result;
 
 /*-----If there is an array, print it-----*/
-
 	if (array == NULL)
 		return (-1);
-	printf("---------------------------\nSearching in array: %d", array[index]);
+	printf("Searching in array: %d", array[index]);
 	for (index = 1; index <= size - 1 && array[index]; index++)
-	{
-		printf(", %d", array[index]);
+	{	printf(", %d", array[index]);
 	}
 	printf("\n");
 
@@ -32,16 +31,25 @@ int binary_search(int *array, size_t size, int value)
 		middle = (size - 1) / 2;
 
 /*-----Take decisions-----*/
-
 	if (value == array[middle]) /*Found!*/
 		return (middle);
-
 	else if (size == 1) /*-----The element is not in the array*/
 		return (-1);
-
 	else if (value > array[middle]) /*----It's to the right------*/
-		return (middle + 1 + binary_search(&array[middle + 1], (size - middle) - 1, value));
-
-	else /*-----It's to the left------*/
-		return (binary_search(array, middle, value));
+	{	nm = middle + 1; /* Save the previous index number */
+		result = (binary_search(&array[nm], (size - middle) - 1, value));
+		printf("result %d", result);
+		if (result == -1)
+			return (-1);
+		else
+			return (result + nm); /*Sum the previous index to get the full index*/
+	}	else
+	{
+		result = (binary_search(array, middle, value));
+		printf("result %d", result);
+		if (result == -1)
+			return (-1);
+		else
+			return (result);
+	}
 }
